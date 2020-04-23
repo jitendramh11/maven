@@ -12,6 +12,8 @@ public class amazono {
 	private WebElement searchbtn;
 	@FindBy(linkText="The Apple: History's greatest mystery. Mankind's greatest theft.")
 	private WebElement book;
+	@FindBy(id="ebooksImageBlock")
+	private WebElement openbk;
 	public amazono(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
@@ -27,5 +29,14 @@ public class amazono {
 			e.printStackTrace();
 		}
 		book.click();
+		
+		try {
+			Thread.sleep(2500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	openbk.click();
+		
 	}
 }
