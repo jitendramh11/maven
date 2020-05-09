@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="61203" started-at="2020-05-09T17:03:39 IST" finished-at="2020-05-09T17:04:40 IST">
+  <suite name="Default suite" duration-ms="135551" started-at="2020-05-09T19:33:34 IST" finished-at="2020-05-09T19:35:50 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="61203" started-at="2020-05-09T17:03:39 IST" finished-at="2020-05-09T17:04:40 IST">
+    <test name="Default test" duration-ms="135551" started-at="2020-05-09T19:33:34 IST" finished-at="2020-05-09T19:35:50 IST">
       <class name="com.egazette.TestEgazette">
-        <test-method status="PASS" signature="TestEgazette()[pri:0, instance:com.egazette.TestEgazette@3a883ce7]" name="TestEgazette" duration-ms="61130" started-at="2020-05-09T17:03:39 IST" finished-at="2020-05-09T17:04:40 IST">
+        <test-method status="PASS" signature="TestEgazette()[pri:0, instance:com.egazette.TestEgazette@3a883ce7]" name="TestEgazette" duration-ms="135484" started-at="2020-05-09T19:33:34 IST" finished-at="2020-05-09T19:35:50 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestEgazette -->
