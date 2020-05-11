@@ -3,6 +3,7 @@ package com.egazette;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -26,13 +27,17 @@ private WebElement lb2;
 private WebElement submitbtn;
 @FindBy(xpath="/html/body/form/center/div/table[4]/tbody/tr[1]/td/div/table/tbody/tr[17]/td/table/tbody/tr/td[2]/a")
 private WebElement pg2;
+@FindBy(id="gvGazette_lnkflname_Pdf_Img_2")
+private WebElement pdfclk;
+@FindBy(xpath="//*[@id=\"download\"]")
+private WebElement download;
 
 public Egazette(WebDriver driver)
 {
 	PageFactory.initElements(driver, this);
 }
 
-public void egazActions()
+public void egazActions(WebDriver driver)
 {
 	attention.click();
 	try {
@@ -62,7 +67,27 @@ public void egazActions()
  
  pg2.click();
 
+ pdfclk.click();
  
+ String winHandleBefore = driver.getWindowHandle();
+ for (String winHandle : driver.getWindowHandles()) {
+	   // Switch to child window
+	   driver.switchTo().window(winHandle);
+	 }
+
+	// Do some operation on child window and get child window handle.
+	String winHandleAfter = driver.getWindowHandle();
+ 
+	download.click();
+	
+	driver.switchTo().window(winHandleBefore);
+    try {
+		Runtime.getRuntime().exec("C:\\Users\\Admin\\Documents\\egaz.exe");
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}		
+
 
 		 }
 }

@@ -19,7 +19,7 @@ public class TestEgazette {
 		driver.get("http://egazette.nic.in/");
 		driver.manage().window().maximize();
 		Egazette rv=new Egazette(driver);
-		rv.egazActions();
+		rv.egazActions(driver);
 		}
 }
 
