@@ -1,5 +1,6 @@
 package com.egazette;
 
+
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -22,5 +23,3 @@ public class TestEgazette {
 		rv.egazActions(driver);
 		}
 }
-
-

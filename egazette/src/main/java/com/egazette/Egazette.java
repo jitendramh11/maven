@@ -1,17 +1,15 @@
+
 package com.egazette;
 
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-
-
 
 public class Egazette {
 @FindBy(xpath="//*[@id=\"ImgMessage_OK\"]")
@@ -30,7 +28,7 @@ private WebElement pg2;
 @FindBy(id="gvGazette_lnkflname_Pdf_Img_2")
 private WebElement pdfclk;
 @FindBy(xpath="//*[@id=\"download\"]")
-private WebElement download;
+private WebElement download; 
 
 public Egazette(WebDriver driver)
 {
